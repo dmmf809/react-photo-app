@@ -10,7 +10,7 @@ const Main = () => {
         <ButtonAdmin>Add Collection</ButtonAdmin>
       </Link>
       <br />
-      <Link to="AddPhotos">
+      <Link to="/AddPhotos">
         <ButtonAdmin>Add Photos</ButtonAdmin>
       </Link>
       <br />

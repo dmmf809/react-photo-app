@@ -1,19 +1,28 @@
 import React from 'react'
-import { HomeContainer,
-         ButtonLogin,
-         ButtonGallery, } from './HomeElements'
+import { ButtonGroup,
+         HomeContainer,
+         HomeItems,
+         StyledButton,
+         StyledTitle, } from './HomeElements'
 
 const Home = () => {
+
     return (
-        <HomeContainer>
-            <ButtonLogin>
+      <>
+          <HomeItems>
+            <StyledTitle>Photo App</StyledTitle>
+            <ButtonGroup>
+              <StyledButton to="/login">
                 Login
-            </ButtonLogin>
-            <ButtonGallery>
+              </StyledButton>
+              <StyledButton to="/gallery">
                 Gallery
-            </ButtonGallery>
-        </HomeContainer>
-    )
+              </StyledButton>
+            </ButtonGroup>
+          </HomeItems>
+
+      </>
+    );
 }
 
 export default Home

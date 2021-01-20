@@ -5,43 +5,37 @@ export const HomeContainer = styled.div`
     background: linear-gradient(90deg, rgba(196,196,247,1) 0%, rgba(73,196,221,1) 100%);
     background-size: cover;
 `
+//background: linear-gradient(90deg, rgba(196,196,247,1) 0%, rgba(73,196,221,1) 100%);
 
-export const HomeItems = styled.div`
-    height: 100vh;
-    max-height: 100%;
-
-    @media screen and (max-width: 650px) {
-        width: 100%;
-    }
+export const Image = styled.img`
+    height: 90vh;
 `
 
-export const StyledTitle = styled.h1`
-    text-align: center;
-    font-size: clamp(1rem, 7vw, 5rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: 3px;
+export const ButtonContainer = styled.div`
+    position: relative;
 `
 
 export const StyledButton = styled(Link)`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    margin-top:-375px;
+    margin-left:-80px;
+    z-index: 1000;
     padding: 10px;
     width: 150px;
-    background-color: transparent;
+    background-color:#2C5364 ;
     font-size: 16px;
-    border: 3px solid white;
-    border-radius: 25px;
+    border-radius: 10px;
     color: white;
-    text-decoration: none;
     text-align: center;
     transition: ease-in-out 0.3s;
+    text-decoration: none!important;
 
     &:hover {
-        background-color: white;
+        background-color: #47bcc9;
         color: black;
         cursor: pointer
     }
-`
-
-export const ButtonGroup = styled.div`
-    display: flex;
-    justify-content: space-around;
 `

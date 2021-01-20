@@ -4,10 +4,10 @@ export const FormContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
 `
 
-export const FormItems = styled.form`
+export const FormItems = styled.div`
     width: 350px;
     padding: 40px 55px;
     background-color: white;
@@ -28,6 +28,7 @@ export const FormInput = styled.input`
     margin: 5px auto 10px auto;
     transition: ease-in-out 0.3s;
     background-color: #f5f5f5;
+    outline: 0;
 
     ${(props) => props.invalid && 
       `outline-color: red; 
@@ -41,7 +42,7 @@ export const FormInput = styled.input`
 export const FormIcon = styled.p`
     position: absolute;
     font-size: 21px;
-    top: 33px;
+    top: 35px;
     ${(props) => props.right && `right: 15px;`};
     ${(props) => !props.right && `left: 15px;`};
 
@@ -51,7 +52,8 @@ export const FormLabel = styled.p`
     text-align: left;
     font-weight: 13px;
     font-weight: bold;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin: 0 auto;
 `
 
 export const FormButton = styled.button `
@@ -61,8 +63,10 @@ export const FormButton = styled.button `
     font-size: 14px;
     border: 2px solid #47bcc9;
     border-radius: 25px;
+    text-decoration: none!important;
     transition: ease-in-out 0.3s;
-    margin-top: 25px;
+    margin: 15px auto;
+    outline: 0px !important;
 
     &:hover {
       background-color: #47bcc9;
@@ -75,6 +79,7 @@ export const FormErrorMsg = styled.div`
     font-size: 11px;
     color: red;
     margin-top: -5px;
+    margin-bottom: 5px;
     text-align: left;
 `
 

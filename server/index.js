@@ -16,27 +16,34 @@ app.listen(3001, () => {
   console.log("Server is running on port 3001");
 });
 
+//QUERIES
+
+// Login //////////////////////////////////////////////////////
+
 //Login with the right credentials
 app.post("/login", (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
+  const username = req.body.username;
+  const password = req.body.password;
 
-   db.query("SELECT * FROM users WHERE username = ? AND password = ?",
-   [username, password],
-   (err, result) => {
-     if(err) {
+  db.query(
+    "SELECT * FROM users WHERE username = ? AND password = ?",
+    [username, password],
+    (err, result) => {
+      if (err) {
         console.log(err);
-     } else {
-         res.send(result)
-     }
-   })
-})
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
 
+// Collections //////////////////////////////////////////////
 
-//Get all collections
+// get all collections
 app.get("/collections", (req, res) => {
   db.query("SELECT * FROM collection", (err, result) => {
-    if(err) {
+    if (err) {
       console.log(err);
     } else {
       res.send(result);
@@ -44,9 +51,9 @@ app.get("/collections", (req, res) => {
   });
 });
 
-//Get specific collection
+// get specific collection
 app.get("collections/:name", (req, res) => {
-  const name = req.params.name;
+  const name = req.params.name; // the given name on the url
 
   db.query(
     "SELECT * FROM collections WHERE collection_name = ?",

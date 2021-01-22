@@ -32,9 +32,7 @@ export const AddPhotos = () => {
       {collList.map((val, key) => {
         return (
           <div>
-            <Link to="/AddPhoto/${val.collName}">
-              {" "}
-              {/* NOT DONE*/}
+            <Link to={`/AddPhoto/${val.collName}`}>
               <h3>{val.collName}</h3>
             </Link>
           </div>

@@ -5,14 +5,14 @@ import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { GlobalStyles } from "./globalStyles";
-import { HomeContainer } from "./components/Home/HomeElements";
+import { Image } from "./components/Home/HomeElements";
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
       <Navbar />
-      <HomeContainer>
+      <Image/>
         <Switch>
           <Route path="/login">
             <Login />
@@ -21,7 +21,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </HomeContainer>
     </Router>
   );
 }

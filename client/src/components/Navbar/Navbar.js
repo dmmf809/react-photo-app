@@ -7,7 +7,7 @@ const Navbar = () => {
     return(
         <>
             <Nav>
-              <StyledTitle>Photo App</StyledTitle>
+              <StyledTitle to="/home">Photo App</StyledTitle>
               <NavLink to="/login">
                 Login
               </NavLink>

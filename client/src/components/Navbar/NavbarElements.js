@@ -11,11 +11,17 @@ export const Nav = styled.nav`
     font-weight: 700;
 `;
 
-export const StyledTitle = styled.h1`
+export const StyledTitle = styled(Link)`
     margin-left: 35px;
     color: #47bcc9;
     font-family: 'Lobster', cursive;
     font-size: 2rem;
+    text-decoration: none!important;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        color: #2C5364;
+    }
 
 `
 
@@ -28,6 +34,7 @@ export const NavLink = styled(Link)`
     cursor: pointer;
     color: #ffff;
     text-decoration: none!important;
+    transition: ease-in-out 0.3s;
 
     &:hover {
         color: #0F2027;

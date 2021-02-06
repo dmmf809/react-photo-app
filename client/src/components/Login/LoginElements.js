@@ -5,6 +5,11 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 `
 
 export const FormItems = styled.div`

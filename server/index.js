@@ -8,7 +8,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "",
+  password: "p@szW0rd!248",
   database: "photoapp",
 });
 
@@ -18,44 +18,19 @@ app.listen(3001, () => {
 
 //Login with the right credentials
 app.post("/login", (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
-
-   db.query("SELECT * FROM users WHERE username = ? AND password = ?",
-   [username, password],
-   (err, result) => {
-     if(err) {
-        console.log(err);
-     } else {
-         res.send(result)
-     }
-   })
-})
-
-
-//Get all collections
-app.get("/collections", (req, res) => {
-  db.query("SELECT * FROM collection", (err, result) => {
-    if(err) {
-      console.log(err);
-    } else {
-      res.send(result);
-    }
-  });
-});
-
-//Get specific collection
-app.get("collections/:name", (req, res) => {
-  const name = req.params.name;
+  const username = req.body.username;
+  const password = req.body.password;
 
   db.query(
-    "SELECT * FROM collections WHERE collection_name = ?",
-    [name],
+    "SELECT * FROM users WHERE username = ? AND password = ?",
+    [username, password],
     (err, result) => {
       if (err) {
         console.log(err);
-      } else {
+      } else if(result.length > 0){
         res.send(result);
+      } else {
+        res.send()
       }
     }
   );
